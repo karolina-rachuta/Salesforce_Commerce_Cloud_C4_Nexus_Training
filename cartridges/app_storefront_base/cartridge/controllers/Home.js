@@ -10,7 +10,7 @@ var consentTracking = require('*/cartridge/scripts/middleware/consentTracking');
 var pageMetaData = require('*/cartridge/scripts/middleware/pageMetaData');
 
 /**
- * Any customization on this endpoint3, also requires update for Default-Start endpoint
+ * Any customization on this endpoint, also requires update for Default-Start endpoint
  */
 /**
  * Home-Show : This endpoint is called when a shopper navigates to the home page
@@ -30,15 +30,20 @@ server.get('Show', consentTracking.consent, cache.applyDefaultCache, function (r
 
     pageMetaHelper.setPageMetaTags(req.pageMetaData, Site.current);
 
-    var page = PageMgr.getPage('homepage');
 
-    if (page && page.isVisible()) {
-        res.page('homepage');
-    } else {
-        res.render('home/homePage');
+    if (customer.isAuthenticated()) {
+        var page = PageMgr.getPage('homepage');
+
+        if (page && page.isVisible()) {
+            res.page('homepage');
+        } else {
+            res.render('home/homePage');
+        }
+
+        next();
     }
-    next();
 }, pageMetaData.computedPageMetaData);
+
 
 server.get('ErrorNotFound', function (req, res, next) {
     res.setStatusCode(404);
