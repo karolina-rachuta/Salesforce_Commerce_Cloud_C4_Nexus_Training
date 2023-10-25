@@ -5,7 +5,7 @@
         assets.addCss('/css/homePage.css');
     </isscript>
 
-    kr1: <p>${pdict.messege}</p>
+    kr1: <p>${pdict.message}</p>
 
 
     <!-- +1.888.555.0199 -->
