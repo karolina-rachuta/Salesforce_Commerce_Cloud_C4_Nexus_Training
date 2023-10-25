@@ -10,7 +10,7 @@ var consentTracking = require('*/cartridge/scripts/middleware/consentTracking');
 var pageMetaData = require('*/cartridge/scripts/middleware/pageMetaData');
 
 /**
- * Any customization on this endpoint3, also requires update for Default-Start endpoint
+ * Any customization on this endpoint, also requires update for Default-Start endpoint
  */
 /**
  * Home-Show : This endpoint is called when a shopper navigates to the home page
