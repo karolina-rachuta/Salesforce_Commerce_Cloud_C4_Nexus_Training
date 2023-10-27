@@ -13,7 +13,7 @@ server.append('Show', function (req, res, next) {
     var viewData = res.getViewData();
     viewData = {
         message: 'there is a new cartridge KR'
-    }|
+    };
 
     if (HookMgr.hasHook('app_homework_addViewData')) {
         HookMgr.callHook('app_homework_addViewData', 'addViewData', viewData);
