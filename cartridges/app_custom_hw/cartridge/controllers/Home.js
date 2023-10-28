@@ -10,18 +10,18 @@ var HookMgr = require('dw/system/HookMgr');
 
 server.extend(module.superModule);
 
-server.append('Show', userLoggedIn.validateLoggedIn, function (req, res, next) {
+server.prepend('Show', userLoggedIn.validateLoggedIn, function (req, res, next) {
     var viewData = res.getViewData();
     viewData = {
         message: 'there is a new cartridge KR'
     };
 
-    if (HookMgr.hasHook('app_homework_addViewData')) {
-        HookMgr.callHook('app_homework_addViewData', 'addViewData', viewData);
+    if (HookMgr.hasHook('app.homework.addViewData')) {
+        HookMgr.callHook('app.homework.addViewData', 'addViewData', viewData);
     }
 
     res.setViewData(viewData);
-    next();
+    return next();
 });
 
 module.exports = server.exports();

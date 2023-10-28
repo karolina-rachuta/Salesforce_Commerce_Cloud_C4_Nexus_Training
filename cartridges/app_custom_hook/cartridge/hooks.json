@@ -1,8 +1,0 @@
-{
-    "hooks": [
-        {
-            "name": "app_homework_addViewData",
-            "script": "~/cartridge/script/hooks/addViewDataHook.js"
-        }
-    ]
-}
