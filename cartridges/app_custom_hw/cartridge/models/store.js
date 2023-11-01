@@ -6,11 +6,12 @@ var base = module.superModule;
  * @classdesc The stores model
  * @param {dw.catalog.Store} storeObject - a Store objects
  */
-function Store(storeObject) {
+
+function store(storeObject) {
     base.call(this, storeObject);
     if (storeObject) {
         this.email = storeObject.email;
     }
 }
 
-module.exports = Store;
+module.exports = store;
