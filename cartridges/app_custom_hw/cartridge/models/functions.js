@@ -32,8 +32,7 @@ function getPricesForProduct(product) {
  * @param {dw.catalog.Catalog} catalog
  * @returns {collection} main categories
  */
-function getCatalogMainCategory(catalog) {
-    var catalogID = catalog.getID();
+function getCatalogMainCategory(catalogID) {
     var CatalogMgr = require('dw/catalog/CatalogMgr');
     return CatalogMgr.getCategory(catalogID).getRoot().getSubCategories();
 }
