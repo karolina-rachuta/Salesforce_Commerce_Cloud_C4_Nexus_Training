@@ -67,7 +67,7 @@
                     <isif condition="${index.first}">
                         <p>first product</p>
                     <iscomment> last product </iscomment>
-                    <iselseif condition="${index.last && pdict.items.lenght > 0}" />
+                    <iselseif condition="${index.last > 0}" />
                         <p>last product</p>
                     </isif>
                  </isloop>
