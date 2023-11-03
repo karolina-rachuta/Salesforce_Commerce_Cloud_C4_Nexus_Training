@@ -7,9 +7,9 @@
 
     <p>${pdict.session}</p>
     <isif condition="${!session.custom.variable}">
-    <isset name="variable" value="1" scope="session" />
+        <isset name="variable" value="1" scope="session" />
     <iselse/>
-    ${session.custom.variable++}
+        ${session.custom.variable++}
     </isif>
 
     <!-- +1.888.555.0199 -->
