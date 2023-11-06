@@ -8,7 +8,6 @@
 
     <isset name="product" value="${pdict.product}" scope="page" />
     <isset name="showPromo" value="${product.raw.custom.ShowPromo}" scope="page" />
-    <isprint value="${pdict.product}" encoding="on" />
     <isset name="isQuickView" value="${false}" scope="page" />
     <isset name="isProductSet" value="${pdict.product.productType === 'set'}" scope="page" />
     <isobject object="${product.raw}" view="detail" />
