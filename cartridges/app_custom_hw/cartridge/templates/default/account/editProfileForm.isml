@@ -59,7 +59,7 @@
     <input type="text" class="form-control" id="interests" <isprint
         value="${pdict.profileForm.customer.interests.attributes}" encoding="off" />/>
     <div class="invalid-feedback"></div>
-
+</div>
     <div class="form-group">
     <label class="form-control-label" for="residence">
         <isprint value="${pdict.profileForm.customer.residence.label}" encoding="htmlcontent" />
