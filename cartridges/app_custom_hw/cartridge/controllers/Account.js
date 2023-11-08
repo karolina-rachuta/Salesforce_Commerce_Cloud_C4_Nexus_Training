@@ -32,6 +32,7 @@ server.append(
     function (req, res, next) {
         var accountHelpers = require('*/cartridge/scripts/account/accountHelpers');
         var accountModel = accountHelpers.getAccountModel(req);
+        var profileForm = server.forms.getForm('profile');
         var viewData = res.getViewData();
         viewData.profileForm.customer.interests.value = accountModel.profile.interests;
         res.setViewData(viewData);

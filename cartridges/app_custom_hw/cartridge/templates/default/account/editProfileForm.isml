@@ -61,17 +61,6 @@
     <div class="invalid-feedback"></div>
 </div>
 
-<div class="form-group
-
-        <isif condition=" ${pdict.profileForm.customer.interests.mandatory === true}">required</isif>">
-    <label class="form-control-label" for="interests">
-        <isprint value="${pdict.profileForm.customer.interests.label}" encoding="htmlcontent" />
-    </label>
-    <input type="text" class="form-control" id="interests" <isprint
-        value="${pdict.profileForm.customer.interests.attributes}" encoding="off" />/>
-    <div class="invalid-feedback"></div>
-</div>
-
 <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
 <div class="row">
     <div class="col form-group">

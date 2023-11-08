@@ -58,6 +58,21 @@
 			formid="addtoemaillist" 
 			label="description.checkbox.emailsignup.profile"  
 			type="boolean"/>
+			
+			<field
+			formid="interests"
+			label="label.input.interests.profile"
+			mandatory="true"
+			max-length="100"
+			missing-error="error.message.required"
+			range-error="error.message.100orless"
+			type="string" />
+
+		<!-- <field
+			formid="country"
+			label="label.input.country.profile"
+			mandatory="false"
+			type="string" /> -->
 	</group>
 
 	<group formid="login">
@@ -93,19 +108,6 @@
 			value-error="error.message.currentpasswordnomatch"
 			type="string" />
 		<include formid="newpasswords" name="newPasswords"/>
-
-		<!-- <field
-			formid="country"
-			label="label.input.country.profile"
-			mandatory="false"
-			type="string" /> -->
-		<field
-			formid="interests"
-			label="label.input.interests.profile"
-			mandatory="true"
-			max-length="100"
-			missing-error="error.message.required"
-			range-error="error.message.100orless"
-			type="string" />
+		
 	</group>
 </form>
