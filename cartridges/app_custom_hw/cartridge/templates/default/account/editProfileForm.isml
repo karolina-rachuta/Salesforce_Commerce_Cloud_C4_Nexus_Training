@@ -59,6 +59,18 @@
     <input type="text" class="form-control" id="interests" <isprint
         value="${pdict.profileForm.customer.interests.attributes}" encoding="off" />/>
     <div class="invalid-feedback"></div>
+
+    <div class="form-group">
+    <label class="form-control-label" for="residence">
+        <isprint value="${pdict.profileForm.customer.residence.label}" encoding="htmlcontent" />
+    </label>
+    <select class="form-control" id="residence" <isprint value="${pdict.profileForm.customer.residence.attributes}" encoding="off" />>
+        <isloop items="${pdict.profileForm.customer.residence.options}" var="country">
+            <option id="${country.optionid}" value="${country.value}">${country.label}</option>
+        </isloop>
+    </select>
+    <div class="invalid-feedback"></div>
+</div>
 </div>
 
 <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />

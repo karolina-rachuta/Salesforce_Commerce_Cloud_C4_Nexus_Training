@@ -68,11 +68,18 @@
 			range-error="error.message.100orless"
 			type="string" />
 
-		<!-- <field
-			formid="country"
-			label="label.input.country.profile"
-			mandatory="false"
-			type="string" /> -->
+			<field formid="residence" 
+			label="label.input.residence.profile" 
+			type="string" 
+			missing-error="error.message.country.missing">
+				<options>
+					<option optionid="US" 	label="US" 	value="US"/>
+					<option optionid="CA" 	label="CA" 	value="CA"/>
+					<option optionid="UK" 	label="UK" 	value="UK"/>
+					<option optionid="BG" 	label="BG" 	value="BG"/>
+					<option optionid="DE" 	label="DE" 	value="DE"/>
+				</options>
+			</field>
 	</group>
 
 	<group formid="login">
