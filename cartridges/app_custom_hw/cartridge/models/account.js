@@ -12,7 +12,7 @@ var base = module.superModule;
 function account(currentCustomer, addressModel, orderModel) {
     base.call(this, currentCustomer, addressModel, orderModel);
     this.profile.residence = customer.profile.getCustom().residence;
-    this.profile.interests = customer.profile.custom.interests;
+    this.profile.interests = customer.profile.getCustom().interests;
 }
 
 module.exports = account;

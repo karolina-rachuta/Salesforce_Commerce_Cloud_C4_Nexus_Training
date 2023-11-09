@@ -50,6 +50,15 @@
         value="${pdict.profileForm.customer.emailconfirm.attributes}" encoding="off" />>
     <div class="invalid-feedback"></div>
 </div>
+     <div class="form-group
+        <isif condition="${pdict.profileForm.login.password.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="password">
+            <isprint value="${pdict.profileForm.login.password.label}" encoding="htmlcontent" />
+        </label>
+        <input type="password" class="form-control" id="password" <isprint value="${pdict.profileForm.login.password.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
 <iscomment> HOMEWORK </iscomment>
 <div class="form-group
         <isif condition=" ${pdict.profileForm.customer.interests.mandatory === true}">required</isif>">
