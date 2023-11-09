@@ -59,7 +59,7 @@
 			label="description.checkbox.emailsignup.profile"  
 			type="boolean"/>
 			
-			<field
+		<field
 			formid="interests"
 			label="label.input.interests.profile"
 			mandatory="true"
@@ -68,8 +68,9 @@
 			range-error="error.message.100orless"
 			type="string" />
 
-			<field formid="residence" 
+		<field formid="residence" 
 			label="label.input.residence.profile" 
+			mandatory="false"
 			type="string" 
 			missing-error="error.message.country.missing">
 				<options>
@@ -80,6 +81,11 @@
 					<option optionid="DE" 	label="DE" 	value="DE"/>
 				</options>
 			</field>
+			
+			<field 
+			formid="addtoemaillist" 
+			label="description.checkbox.emailsignup.profile"  
+			type="boolean"/>
 	</group>
 
 	<group formid="login">
