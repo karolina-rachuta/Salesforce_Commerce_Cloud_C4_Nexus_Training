@@ -22,4 +22,23 @@ server.prepend('Show', function (req, res, next) {
     return next();
 });
 
+server.get('Content', function (req, res, next) {
+    var ContentMgr = require('dw/content/ContentMgr');
+    var guestContent = ContentMgr.getContent('guestContent');
+    var loggedContent = ContentMgr.getContent('loggedContent');
+    var logged = customer.isAuthenticated();
+
+    if (logged) {
+        var firstName = customer.profile.firstName;
+    }
+    res.render('content/contentAsset', {
+        logged: logged,
+        guestContent: guestContent,
+        loggedContent: loggedContent,
+        firstName: firstName
+    });
+
+    next();
+});
+
 module.exports = server.exports();
