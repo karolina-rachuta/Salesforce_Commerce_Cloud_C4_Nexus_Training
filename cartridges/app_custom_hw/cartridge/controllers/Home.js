@@ -9,8 +9,8 @@ var userLoggedIn = require('*/cartridge/scripts/middleware/userLoggedIn');
 var HookMgr = require('dw/system/HookMgr');
 
 server.extend(module.superModule);
-
-server.prepend('Show', userLoggedIn.validateLoggedIn, function (req, res, next) {
+// userLoggedIn.validateLoggedIn
+server.prepend('Show', function (req, res, next) {
     var viewData = res.getViewData();
     viewData.message = 'there is a new cartridge KR';
 
