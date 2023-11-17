@@ -7,12 +7,13 @@
 var server = require('server');
 var userLoggedIn = require('*/cartridge/scripts/middleware/userLoggedIn');
 var HookMgr = require('dw/system/HookMgr');
+var Resource = require('dw/web/Resource');
 
 server.extend(module.superModule);
-// userLoggedIn.validateLoggedIn
+
 server.prepend('Show', function (req, res, next) {
     var viewData = res.getViewData();
-    viewData.message = 'there is a new cartridge KR';
+    viewData.message = Resource.msg('label.message.cartridge', 'common', null);
 
     if (HookMgr.hasHook('app.homework.addViewData')) {
         HookMgr.callHook('app.homework.addViewData', 'addViewData', viewData);
