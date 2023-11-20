@@ -1,0 +1,12 @@
+<isdecorate template="common/layout/page">
+        <isset name="firstName" value="${pdict.firstName}" scope="page" />
+        <isset name="guestContent" value="${pdict.guestContent}" scope="page" />
+        <isset name="loggedContent" value="${pdict.loggedContent}" scope="page" />
+
+        <isif condition="${pdict.logged}">
+                <isprint value="${dw.util.StringUtils.format(loggedContent.custom.body.markup, firstName)}"
+                        encoding="off" />
+            <iselse/>
+                <isprint value="${guestContent.custom.body}" encoding="off" />
+        </isif>
+</isdecorate>
