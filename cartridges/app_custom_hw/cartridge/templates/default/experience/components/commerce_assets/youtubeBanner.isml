@@ -1,0 +1,4 @@
+<div class="text-center">
+    <p>${pdict.title}
+        <iframe width="${pdict.width}" height="${pdict.height}" src="${pdict.id}" alt="${pdict.alt}"></iframe>
+</div>

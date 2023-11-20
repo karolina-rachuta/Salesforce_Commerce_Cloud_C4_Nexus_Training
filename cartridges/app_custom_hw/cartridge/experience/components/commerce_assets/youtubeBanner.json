@@ -1,0 +1,51 @@
+{
+    "name": "YT Banner",
+    "description": "A youtube banner.",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id":"youtube_video",
+            "name":"Set your youtube video",
+            "description":"You can define the link, title, size and alt text for the banner video.",
+            "attribute_definitions":[
+        {
+          "id": "id",
+          "name": "Video link",
+          "description": "The video shown by the banner.",
+          "type": "url",
+          "required": true
+        },
+        {
+          "id": "title",
+          "name": "Video title",
+          "description": "The title of video shown by the banner.",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "alt",
+          "name": "Banner Video Alt Text",
+          "description": "The video alt text shown by the banner.",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id":"width",
+          "name":"Size-width",
+          "description":"The video size, write number and unit.",
+          "type":"string",
+          "required":false,
+          "default_value":"100%"
+        },
+        {
+          "id":"height",
+          "name":"Size-height",
+          "description":"The video size, write number and unit.",
+          "type":"string",
+          "required":false,
+          "default_value":"500px"
+        }
+        ]}
+    ],
+    "region_definitions": []
+   }
