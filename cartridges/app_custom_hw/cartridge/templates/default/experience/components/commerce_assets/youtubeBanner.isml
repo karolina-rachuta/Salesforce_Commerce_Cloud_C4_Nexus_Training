@@ -1,4 +1,8 @@
-<div class="text-center">
-    <p>${pdict.title}
-        <iframe width="${pdict.width}" height="${pdict.height}" src="${pdict.id}" alt="${pdict.alt}"></iframe>
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerce_assets/youtubeBanner.css');
+</isscript>
+<div class="youtubeBanner__container">
+    <h3>${pdict.title}</h3>
+    <iframe width="${pdict.width}" height="${pdict.height}" src="${pdict.id}" alt="${pdict.alt}"></iframe>
 </div>
