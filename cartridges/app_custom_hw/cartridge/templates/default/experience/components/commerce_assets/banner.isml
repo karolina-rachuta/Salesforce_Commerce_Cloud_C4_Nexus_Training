@@ -1,1 +1,1 @@
-<div>banner</div>
+<div class="text-center">${Resource.msg('msg.banner.text', 'common', null)}</div>
