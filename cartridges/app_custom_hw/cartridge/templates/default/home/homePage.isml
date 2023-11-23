@@ -7,6 +7,7 @@
     
     kr1: <p>${pdict.message}</p>
     kr2: <p> ${pdict.info}</p>
+    <isslot id="demo-slot" description="Homework task 1 on the home page." context="global" />
 
     <!-- +1.888.555.0199 -->
     <!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demandware customers can remove this.-->
