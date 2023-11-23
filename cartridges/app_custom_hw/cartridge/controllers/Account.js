@@ -135,12 +135,8 @@ server.replace(
                         profile.setLastName(formInfo.lastName);
                         profile.setEmail(formInfo.email);
                         profile.setPhoneHome(formInfo.phone);
-                        // profile.custom.interests = profileForm.interests.value;
-                        // profile.custom.residence = profileForm.residence.value;
                         profile.getCustom().interests = formInfo.interests;
                         profile.getCustom().residence = formInfo.residence;
-                        // profile.getCustom().interests = result.interests;
-                        // profile.getCustom().residence = result.residence;
                     });
 
                     // Send account edited email
