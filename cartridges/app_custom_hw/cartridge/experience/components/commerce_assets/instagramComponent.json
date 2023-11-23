@@ -1,0 +1,58 @@
+{
+    "name": "Instagram Section",
+    "description": "A section with instagram post and extra text.",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id":"instagram_section",
+            "name":"Choose your instagram post and add extra text",
+            "description":"You can define the instagram post, and write paragraph with title and text.",
+            "attribute_definitions": [
+        {
+          "id": "instagramPost",
+          "name": "Instagram link",
+          "description": "The post from instagram will be shown.",
+          "type": "url",
+          "required": true
+        },
+        {
+          "id": "titlePost",
+          "name": "title",
+          "description": "The title of the post.",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "altPost",
+          "name": "Instagram Post Alt Text",
+          "description": "The post alt text shown in the section.",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id":"textPost",
+          "name":"text",
+          "description": "Place for extra text, paragraph",
+          "type":"string",
+          "required": true
+        },
+        {
+          "id":"width",
+          "name":"Size-width",
+          "description":"The video size, write number and unit.",
+          "type":"string",
+          "required": false,
+          "default_value":"100%"
+        },
+        {
+          "id":"height",
+          "name":"Size-height",
+          "description":"The video size, write number and unit.",
+          "type":"string",
+          "required":false,
+          "default_value":"300px"
+        }
+        ]}
+    ],
+    "region_definitions": []
+   }

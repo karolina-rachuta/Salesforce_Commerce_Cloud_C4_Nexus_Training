@@ -1,0 +1,8 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerce_assets/youtubeBanner.css');
+</isscript>
+<div class="d-flex flex-column justify-content-center align-items-center mt-3 mb-3">
+    <h3 class="mb-3">${pdict.title}</h3>
+    <iframe width="${pdict.width}" height="${pdict.height}" src="${pdict.id}" alt="${pdict.alt}"></iframe>
+</div>
