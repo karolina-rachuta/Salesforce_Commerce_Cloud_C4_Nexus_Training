@@ -1,0 +1,9 @@
+<iscomment> <isinclude template="demo/include" />
+there will be error: parms do not match the route so we needed to do:
+<isinclude url="${URLUtils.url('Demo-Include')}"/>
+and added middleware function in controller: server.middleware.include
+</iscomment>
+<iscomment> error: <p>${items.query}</p> </iscomment>
+<p>${items}</p>
+<iscomment> this date wont be cached </iscomment>
+<p>Include Template date - <isprint value="${new Date().toLocalString()}" encoding="on" /></p>

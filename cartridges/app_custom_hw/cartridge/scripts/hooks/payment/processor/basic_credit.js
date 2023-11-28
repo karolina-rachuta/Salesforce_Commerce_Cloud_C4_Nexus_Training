@@ -34,9 +34,17 @@ function Handle(basket, paymentInformation, paymentMethodID, req) {
     var expirationYear = paymentInformation.expirationYear.value;
     var serverErrors = [];
     var creditCardStatus;
-    
+
     var cardType = paymentInformation.cardType.value;
     var paymentCard = PaymentMgr.getPaymentCard(cardType);
+
+    if (basket.customerEmail !== 'xxx@host.com') {
+        throw new Error(Resource.msg(
+            'error.payment.wrong.email',
+            'checkout',
+            null
+        ));
+    }
 
     // Validate payment instrument
     if (paymentMethodID === PaymentInstrument.METHOD_CREDIT_CARD) {
