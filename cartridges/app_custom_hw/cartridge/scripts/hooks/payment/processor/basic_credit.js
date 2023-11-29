@@ -39,7 +39,7 @@ function Handle(basket, paymentInformation, paymentMethodID, req) {
     var cardType = paymentInformation.cardType.value;
     var paymentCard = PaymentMgr.getPaymentCard(cardType);
 
-    if (basket.customerEmail !== 'xxx@host.com') {
+    if (basket.customerEmail !== Resource.msg('check.email', 'checkout', null)) {
         throw new Error(Resource.msg(
             'error.payment.wrong.email',
             'checkout',
