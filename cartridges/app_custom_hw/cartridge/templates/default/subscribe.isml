@@ -1,0 +1,68 @@
+<isdecorate template="common/layout/page">
+    <div class="hero slant-down account-image">
+        <h1 class="page-title">${Resource.msg('label.newsletter', 'forms', null)}</h1>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-8 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="${URLUtils.url('Subscribe-Save')}" class="edit-profile-form" method="POST"
+                            <isprint value="${pdict.newsletterForm.attributes}" encoding="off" />>
+
+
+                                <div class="form-group
+                                     <isif condition=" ${pdict.newsletterFormCo.email.mandatory === true}">required</isif>">
+                                    <label class="form-control-label" for="email">
+                                        <isprint value="${pdict.newsletterFormCo.email.label}" encoding="htmlcontent" />
+                                    </label>
+                                    <input type="email" class="form-control" id="email" <isprint
+                                        value="${pdict.newsletterFormCo.email.attributes}" encoding="off" />>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                            <div class="form-group
+            <isif condition=" ${pdict.newsletterFormCo.firstName.mandatory === true}">required</isif>">
+                                <label class="form-control-label" for="firstName">
+                                    <isprint value="${pdict.newsletterFormCo.firstName.label}" encoding="htmlcontent" />
+                                </label>
+                                <input type="text" class="form-control" id="firstName" <isprint
+                                    value="${pdict.newsletterFormCo.firstName.attributes}" encoding="off" />>
+                                <div class="invalid-feedback"></div>
+                            </div>
+
+                            <div class="form-group
+            <isif condition=" ${pdict.newsletterFormCo.lastName.mandatory === true}">required</isif>">
+                                <label class="form-control-label" for="lastName">
+                                    <isprint value="${pdict.newsletterFormCo.lastName.label}" encoding="htmlcontent" />
+                                </label>
+                                <input type="text" class="form-control" id="lastName" <isprint
+                                    value="${pdict.newsletterFormCo.lastName.attributes}" encoding="off" />>
+                                <div class="invalid-feedback"></div>
+                            </div>
+
+                            <div class="form-group
+            <isif condition=" ${pdict.newsletterFormCo.gender.mandatory === false}">required</isif>">
+                                <label class="form-control-label" for="gender">
+                                    <isprint value="${pdict.newsletterFormCo.gender.label}" encoding="htmlcontent" />
+                                </label>
+                                <input type="text" class="form-control" id="gender" <isprint
+                                    value="${pdict.newsletterFormCo.gender.attributes}" encoding="off" />>
+                                <div class="invalid-feedback"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <button type="submit" name="save"
+                                        class="btn btn-save btn-block btn-primary">${Resource.msg('button.save', 'account', null)}</button>
+                                </div>
+                            </div>
+                             <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>
