@@ -68,10 +68,11 @@ server.post(
         var Transaction = require('dw/system/Transaction');
         var URLUtils = require('dw/web/URLUtils');
         var newsletterFormCo = server.forms.getForm('subscribe');
-        var NEWSLETTER_SUB_CO = "NEWSLETTER_SUBSCRIPTION_CO";
+        var type = "NEWSLETTER_SUBSCRIPTION_CO";
+        var keyValue = newsletterFormCo.email.value;
         // form validation
 
-        var newsletterResult = CustomObjectMgr.getCustomObject(NEWSLETTER_SUB_CO, newsletterFormCo.email.value);
+        var newsletterResult = CustomObjectMgr.getCustomObject(type, keyValue);
         if (!empty(newsletterResult)) {
             newsletterFormCo.valid = false;
             newsletterFormCo.email.valid = false;
@@ -79,7 +80,7 @@ server.post(
         }
         if (newsletterFormCo.valid) {
             Transaction.wrap(function () {
-                var newsletterEntry = CustomObjectMgr.createCustomObject(NEWSLETTER_SUB_CO, newsletterFormCo.email.value);
+                var newsletterEntry = CustomObjectMgr.createCustomObject(type, keyValue);
                 newsletterEntry.custom.firstName = newsletterFormCo.firstName.value;
                 newsletterEntry.custom.lastName = newsletterFormCo.lastName.value;
                 newsletterEntry.custom.gender = newsletterFormCo.gender.value;

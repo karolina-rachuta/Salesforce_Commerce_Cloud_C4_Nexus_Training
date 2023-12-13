@@ -3,7 +3,6 @@ var File = require('dw/io/File');
 var FileWriter = require('dw/io/FileWriter');
 var CSVStreamWriter = require('dw/io/CSVStreamWriter');
 var Transaction = require('dw/system/Transaction');
-//  var {File, FileWriter, XMLStreamWriter} = require('dw/io');
 
 module.exports.execute = function () {
     var subscribeObjectIterator = CustomObjectMgr.getAllCustomObjects('NEWSLETTER_SUBSCRIPTION_CO');
@@ -12,7 +11,6 @@ module.exports.execute = function () {
     var fileWriter;
     var subscribe;
     try {
-        // file = new File([File.IMPEX, 'test', 'test.xml'].join(File.SEPARATOR));
         file = new File([File.IMPEX, 'subscribe.csv'].join(File.SEPARATOR));
         fileWriter = new FileWriter(file);
         csvWriter = new CSVStreamWriter(fileWriter);
